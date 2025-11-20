@@ -1,0 +1,244 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* HEADER */
+.cv-header {
+  position: relative;
+  width: 80%;
+  height: 350px;
+  margin: auto;
+  background: url('https://raw.githubusercontent.com/KhanhThuanSimple/cv-images/master/img/anhbia.jpg') center/cover no-repeat; /* Ảnh bìa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 15px;
+
+  /* lớp mờ phủ lên ảnh để chữ dễ đọc */
+  .header-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+  }
+
+  /* phần chữ */
+  .header-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 8px;
+  }
+}
+/* PROFILE IMAGE overlaps header + content */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #e0d3b8;
+  position: absolute;
+  margin: -100px 10px 120px 80px;
+  z-index: 5;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+/* CONTENT */
+.cv-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.section{
+  margin-top: 120px;
+}
+/* LEFT COLUMN */
+.left-column {
+  background: #4b3e34;
+  color: #fff;
+  padding: 25px;
+}
+
+.left-column h2 {
+  color: #e0d3b8;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0d3b8;
+  padding-bottom: 4px;
+}
+
+.left-column p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* SOCIAL LINKS */
+section.social-links p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+section.social-links p a {
+  text-decoration: none;
+  color: inherit; /* Giữ nguyên màu chữ gốc */
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+section.social-links p a i {
+  margin-right: 10px;
+  font-size: 16px;
+  width: 24px;
+  text-align: center;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover icon hoặc chữ — không đổi màu */
+section.social-links p:hover a i {
+  transform: scale(1.2);
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+section.social-links p:hover a {
+  filter: brightness(70%); /* Giảm sáng → màu đậm hơn */
+}
+
+/* RIGHT COLUMN */
+.right-column {
+  padding: 25px 35px;
+  background-color: #E2E6E9;
+}
+
+.right-column h2 {
+  color: #4b3e34;
+  font-size: 16px;
+  border-bottom: 1px solid #d6c8b4;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.right-column p, 
+.right-column li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.right-column ul {
+  padding-left: 20px;
+}
+
+/* SOFTWARE SKILLS GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.skills-grid .skill {
+  background: #f0f0f0;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-grid .skill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.skill .stars{
+  color: #FFD700;
+
+}
+
+/* HOBBIES ICONS */
+.hobbies-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.hobbies-icons .hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  width: calc(100% / 8); /* 8 icon trên 1 hàng */
+  min-width: 60px;
+  margin-bottom: 10px;
+}
+
+.hobbies-icons .hobby i {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #4b3e34;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hobbies-icons .hobby i:hover {
+  transform: scale(1.3);
+  color: #3b5998;
+}
+
+.hobbies-icons .hobby span {
+  text-align: center;
+  font-size: 13px;
+}
+
+/* EDUCATION SUMMARY */
+.education-summary ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.education-summary ul li {
+  margin-bottom: 15px;
+}
+
+.education-summary ul li strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.education-summary ul li p {
+  font-size: 13px;
+  color: #555;
+  margin: 3px 0 0 0;
+}
